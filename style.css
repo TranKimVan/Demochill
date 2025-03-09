@@ -1,26 +1,102 @@
+/* --- Slider chứa ảnh chạy qua lại --- */
 .image-slider-container {  
     width: 100%;  
     overflow: hidden;  
-    position: relative;
+    position: relative;  
 }  
 
 .image-slider {  
     display: flex;  
-    width: 300%; /* 3 ảnh, nếu nhiều hơn thì đổi số này */  
+    width: 300%; /* Nếu có nhiều ảnh hơn, đổi con số này */  
     animation: imageSlide 5s linear infinite alternate;  
 }  
 
 .image-slider img {  
-    width: 33.333vw; /* Đảm bảo ảnh hiển thị đúng kích thước trong viewport */  
+    width: 33.333vw; /* Đảm bảo ảnh hiển thị đúng kích thước màn hình */  
     height: auto;  
-    flex-shrink: 0; /* Ngăn ảnh bị co lại khi chạy animation */  
+    flex-shrink: 0; /* Ngăn ảnh bị méo */  
 }  
 
 @keyframes imageSlide {  
-    0% {  
-        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */  
-    }  
-    100% {  
-        transform: translateX(-66.666%); /* Trượt sang trái nhưng không mất hẳn */  
-    }  
+    0% { transform: translateX(0); }  
+    100% { transform: translateX(-66.666%); }  
+}  
+
+/* --- Background và kiểu chữ dễ thương --- */
+body {  
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);  
+    text-align: center;  
+    font-family: 'Comic Sans MS', cursive;  
+    overflow: hidden;  
+}  
+
+.container {  
+    margin-top: 50px;  
+}  
+
+h1 {  
+    color: #fff;  
+    font-size: 24px;  
+}  
+
+/* --- Hiệu ứng hover cho ảnh --- */
+#cat {  
+    width: 150px;  
+    height: auto;  
+    cursor: pointer;  
+    transition: transform 0.3s;  
+}  
+
+#cat:hover {  
+    transform: scale(1.1);  
+}  
+
+/* --- Khung hiển thị câu quote --- */
+#quote {  
+    background: rgba(255, 255, 255, 0.7);  
+    display: inline-block;  
+    padding: 10px;  
+    border-radius: 10px;  
+    font-size: 18px;  
+    margin-top: 20px;  
+}  
+
+/* --- Hiệu ứng trái tim bay lên khi click --- */
+.heart {  
+    position: absolute;  
+    color: red;  
+    font-size: 24px;  
+    animation: fly-up 1s linear;  
+}  
+
+@keyframes fly-up {  
+    0% { transform: translateY(0); opacity: 1; }  
+    100% { transform: translateY(-100px); opacity: 0; }  
+}  
+
+/* --- Nút bật/tắt nhạc --- */
+#music-btn {  
+    position: fixed;  
+    bottom: 20px;  
+    right: 20px;  
+    background: pink;  
+    border: none;  
+    padding: 10px;  
+    border-radius: 10px;  
+    cursor: pointer;  
+    font-size: 16px;  
+}  
+
+#music-btn:hover {  
+    background: hotpink;  
+}  
+
+/* --- Hiệu ứng ngôi sao trên nền --- */
+#starCanvas {  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    pointer-events: none;  
 }
