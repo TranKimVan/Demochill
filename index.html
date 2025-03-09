@@ -3,61 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trò Chơi Méo Mặt</title>
-    <style>
-        body {
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            position: relative;
-        }
-
-        .face {
-            width: 200px; /* Điều chỉnh kích thước ảnh */
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .face img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .face.meo {
-            transform: scaleX(1.2) scaleY(0.8);
-        }
-
-    </style>
+    <title>Web Cute Nhìn Khi Chán</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <div class="face" id="face">
-            <img src="face.jpg" alt="Mặt bạn mầy">
-        </div>
+        <h1>🐱 Xin chào, nhấn vào đây để nhận câu nói dễ thương! 💖</h1>
+        <img id="cat" src="https://i.gifer.com/4Zjf.gif" alt="Mèo Cute">
+        <p id="quote">💬 Hôm nay trời đẹp lắm đó nha! 🌈</p>
     </div>
 
-    <script>
-        const face = document.getElementById("face");
-
-        face.addEventListener("click", () => {
-            face.classList.add("meo");
-
-            setTimeout(() => {
-                face.classList.remove("meo");
-            }, 500);
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
