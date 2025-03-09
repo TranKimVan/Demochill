@@ -1,3 +1,20 @@
+.image-slider-container {  
+    width: 100%;  
+    overflow: hidden;  
+}  
+
+.image-slider {  
+    display: flex;  
+    width: 300%; /* 3 ảnh */  
+    animation: imageSlide 10s linear infinite alternate;  
+}  
+
+.image-slider img {  
+    width: 33.333%;  
+    height: auto;  
+} 
+
+
 @keyframes imageSlide {  
     0% {  
         transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */  
