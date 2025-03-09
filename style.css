@@ -1,4 +1,4 @@
-/* --- /* --- Container chứa ảnh --- */
+/* --- Container chứa ảnh --- */
 .image-slider-container {  
     width: 100vw;  
     height: auto;  
@@ -7,8 +7,9 @@
 }  
 
 .image-slider {  
+    display: flex;  
     position: absolute;  
-    width: 60vw; /* Chỉnh kích thước ảnh theo màn hình */  
+    width: 50vw; /* Kích thước ảnh to hơn */  
     animation: imageSlide 3s ease-in-out infinite alternate;  
 }  
 
@@ -19,9 +20,8 @@
 
 @keyframes imageSlide {  
     0% { left: 0; }  
-    100% { left: calc(100vw - 20vw); } /* Chạy đến mép phải rồi quay lại */  
-}  
-
+    100% { left: calc(100vw - 50vw); } /* Chạy đến mép phải rồi quay lại */  
+}
 
 /* --- Background và kiểu chữ dễ thương --- */
 body {  
