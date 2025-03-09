@@ -80,4 +80,3 @@ function drawStars() {
     requestAnimationFrame(drawStars);
 }
 drawStars();
-});
