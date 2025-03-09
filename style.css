@@ -1,24 +1,26 @@
 .image-slider-container {  
     width: 100%;  
     overflow: hidden;  
+    position: relative;
 }  
 
 .image-slider {  
     display: flex;  
-    width: 300%; /* Gấp 3 lần container (cho 3 ảnh) */  
+    width: 300%; /* 3 ảnh, nếu nhiều hơn thì đổi số này */  
     animation: imageSlide 5s linear infinite alternate;  
 }  
 
 .image-slider img {  
-    width: 33.333%;  
+    width: 33.333vw; /* Đảm bảo ảnh hiển thị đúng kích thước trong viewport */  
     height: auto;  
+    flex-shrink: 0; /* Ngăn ảnh bị co lại khi chạy animation */  
 }  
 
 @keyframes imageSlide {  
     0% {  
-        transform: translateX(0); /* Ảnh bắt đầu từ vị trí ban đầu */  
+        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */  
     }  
     100% {  
-        transform: translateX(-66.666%); /* Trượt sang trái để ảnh cuối cùng hiển thị bên phải */  
+        transform: translateX(-66.666%); /* Trượt sang trái nhưng không mất hẳn */  
     }  
 }
