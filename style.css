@@ -12,14 +12,14 @@
 }  
 
 .image-slider img {  
-    width: 50vw; /* Cho ảnh to hơn, mầy có thể chỉnh % tùy ý */  
+    width: 90vw; /* Cho ảnh to hơn, mầy có thể chỉnh % tùy ý */  
     height: auto;  
     flex-shrink: 0; /* Ngăn ảnh bị méo */  
 }  
 
 @keyframes imageSlide {  
     0% { transform: translateX(0); }  
-    100% { transform: translateX(-50%); }  
+    100% { transform: translateX(-100%); }  
 }
 
 /* --- Background và kiểu chữ dễ thương --- */
