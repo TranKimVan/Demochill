@@ -27,7 +27,7 @@
 .image-slider {  
     display: flex; /* Để các ảnh nằm trên một hàng ngang */  
     width: 300%; /* Chiều rộng gấp 3 lần container (cho 3 ảnh) - cần điều chỉnh nếu có nhiều ảnh hơn */  
-    animation: imageSlide 15s linear infinite alternate; /* Tạo hiệu ứng trượt qua lại */  
+    animation: imageSlide 10s linear infinite alternate; /* Tạo hiệu ứng trượt qua lại */  
 }  
 
 
