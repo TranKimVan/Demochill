@@ -1,26 +1,28 @@
 /* --- Slider chứa ảnh chạy qua lại --- */
+/* --- Container chứa ảnh --- */
 .image-slider-container {  
-    width: 100%;  
+    width: 100vw;  
+    height: auto;  
     overflow: hidden;  
     position: relative;  
 }  
 
 .image-slider {  
     display: flex;  
-    width: 300%; /* Nếu có nhiều ảnh hơn, đổi con số này */  
-    animation: imageSlide 9s linear infinite alternate;  
+    position: absolute;  
+    width: 80vw; /* Kích thước ảnh to hơn */  
+    animation: imageSlide 3s ease-in-out infinite alternate;  
 }  
 
 .image-slider img {  
-    width: 200vw; /* Đảm bảo ảnh hiển thị đúng kích thước màn hình */  
+    width: 90%;  
     height: auto;  
-    flex-shrink: 0; /* Ngăn ảnh bị méo */  
 }  
 
 @keyframes imageSlide {  
-    0% { transform: translateX(0); }  
-    100% { transform: translateX(-66.666%); }  
-}  
+    0% { left: 0; }  
+    100% { left: calc(100vw - 50vw); } /* Chạy đến mép phải rồi quay lại */  
+}
 
 /* --- Background và kiểu chữ dễ thương --- */
 body {  
