@@ -6,7 +6,7 @@
 .image-slider {  
     display: flex;  
     width: 300%; /* 3 ảnh */  
-    animation: imageSlide 10s linear infinite alternate;  
+    animation: imageSlide 5s linear infinite alternate;  
 }  
 
 .image-slider img {  
