@@ -8,11 +8,11 @@
 .image-slider {  
     display: flex;  
     width: 200%; /* Nếu có nhiều ảnh hơn, đổi con số này */  
-    animation: imageSlide 6s ease-in-out infinite alternate;  
+    animation: imageSlide 3s ease-in-out infinite alternate;  
 }  
 
 .image-slider img {  
-    width: 90vw; /* Cho ảnh to hơn, mầy có thể chỉnh % tùy ý */  
+    width: 100vw; /* Cho ảnh to hơn, mầy có thể chỉnh % tùy ý */  
     height: auto;  
     flex-shrink: 0; /* Ngăn ảnh bị méo */  
 }  
