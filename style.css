@@ -1,3 +1,18 @@
+@keyframes imageSlide {  
+    0% {  
+        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */  
+    }  
+    100% {  
+        transform: translateX(-66.666%); /* Di chuyển sang trái để ảnh cuối cùng hiển thị ở đầu */  
+    }  
+}  
+
+.image-slider {  
+    display: flex; /* Để các ảnh nằm trên một hàng ngang */  
+    width: 300%; /* Chiều rộng gấp 3 lần container (cho 3 ảnh) - cần điều chỉnh nếu có nhiều ảnh hơn */  
+    animation: imageSlide 15s linear infinite alternate; /* Tạo hiệu ứng trượt qua lại */  
+}  
+
 
 .image-slider-container {  
     width: 100%;  /* Chiều rộng bằng 100% container */  
