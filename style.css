@@ -12,7 +12,7 @@
 }  
 
 .image-slider img {  
-    width: 80vw; /* Đảm bảo ảnh hiển thị đúng kích thước màn hình */  
+    width: 100vw; /* Đảm bảo ảnh hiển thị đúng kích thước màn hình */  
     height: auto;  
     flex-shrink: 0; /* Ngăn ảnh bị méo */  
 }  
