@@ -1,6 +1,6 @@
 /* --- Slider chứa ảnh chạy qua lại --- */
 .image-slider-container {  
-    width: 150%;  
+    width: 220%;  
     overflow: hidden;  
     position: relative;  
 }  
@@ -12,14 +12,14 @@
 }  
 
 .image-slider img {  
-    width: 70vw; /* Đảm bảo ảnh hiển thị đúng kích thước màn hình */  
+    width: 80vw; /* Đảm bảo ảnh hiển thị đúng kích thước màn hình */  
     height: auto;  
     flex-shrink: 0; /* Ngăn ảnh bị méo */  
 }  
 
 @keyframes imageSlide {  
     0% { transform: translateX(0); }  
-    100% { transform: translateX(-50%); }  
+    100% { transform: translateX(-70%); }  
 }  
 
 .image-slider img {  
