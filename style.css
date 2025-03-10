@@ -1,31 +1,26 @@
-/* --- Container chứa ảnh --- */
+/* --- Slider chứa ảnh chạy qua lại --- */
 .image-slider-container {  
-    width: 100vw;  
-    height: 200px; /* Định chiều cao để ảnh không bị mất */  
+    width: 100%;  
     overflow: hidden;  
     position: relative;  
 }  
 
-/* --- Ảnh sẽ chạy qua lại --- */
 .image-slider {  
-    position: absolute;  
-    width: 100px; /* Kích thước ảnh, chỉnh theo ý mầy */  
-    height: auto;  
-    top: 50%;  
-    transform: translateY(-50%); /* Giữ ảnh nằm giữa theo chiều dọc */  
-    animation: imageSlide 3s ease-in-out infinite alternate;  
+    display: flex;  
+    width: 300%; /* Nếu có nhiều ảnh hơn, đổi con số này */  
+    animation: imageSlide 5s linear infinite alternate;  
 }  
 
 .image-slider img {  
-    width: 100%;  
+    width: 33.333vw; /* Đảm bảo ảnh hiển thị đúng kích thước màn hình */  
     height: auto;  
+    flex-shrink: 0; /* Ngăn ảnh bị méo */  
 }  
 
-/* --- Animation chạy qua lại --- */
 @keyframes imageSlide {  
-    0% { left: 0; }  
-    100% { left: calc(100vw - 100px); } /* Ảnh chạy đến mép phải rồi quay lại */  
-}
+    0% { transform: translateX(0); }  
+    100% { transform: translateX(-66.666%); }  
+}  
 
 /* --- Background và kiểu chữ dễ thương --- */
 body {  
@@ -33,7 +28,7 @@ body {
     text-align: center;  
     font-family: 'Comic Sans MS', cursive;  
     overflow: hidden;  
-} 
+}  
 
 .container {  
     margin-top: 50px;  
@@ -76,7 +71,7 @@ h1 {
 
 @keyframes fly-up {  
     0% { transform: translateY(0); opacity: 1; }  
-    100% { transform: translateY(200px); opacity: 0; }  
+    100% { transform: translateY(-100px); opacity: 0; }  
 }  
 
 /* --- Nút bật/tắt nhạc --- */
