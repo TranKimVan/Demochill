@@ -1,15 +1,18 @@
 /* --- Container chứa ảnh --- */
 .image-slider-container {  
     width: 100vw;  
-    height: auto;  
+    height: 200px; /* Định chiều cao để ảnh không bị mất */  
     overflow: hidden;  
     position: relative;  
 }  
 
+/* --- Ảnh sẽ chạy qua lại --- */
 .image-slider {  
     position: absolute;  
-    width: 100px; /* Kích thước ảnh, mầy có thể chỉnh lại */  
+    width: 100px; /* Kích thước ảnh, chỉnh theo ý mầy */  
     height: auto;  
+    top: 50%;  
+    transform: translateY(-50%); /* Giữ ảnh nằm giữa theo chiều dọc */  
     animation: imageSlide 3s ease-in-out infinite alternate;  
 }  
 
@@ -18,6 +21,7 @@
     height: auto;  
 }  
 
+/* --- Animation chạy qua lại --- */
 @keyframes imageSlide {  
     0% { left: 0; }  
     100% { left: calc(100vw - 100px); } /* Ảnh chạy đến mép phải rồi quay lại */  
